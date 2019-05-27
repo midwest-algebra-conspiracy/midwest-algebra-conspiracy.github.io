@@ -83,7 +83,7 @@ First, follow the guide for your operating system [here](https://jekyllrb.com/do
 ~~~ bash
 $ git clone {{ page.repository }}.git proof
 $ cd proof
-$ gem install bundler
+$ gem install bundler -v "~> 1.17"
 $ bundle install
 ~~~
 
