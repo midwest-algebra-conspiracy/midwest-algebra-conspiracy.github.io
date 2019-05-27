@@ -1,11 +1,11 @@
 # Setup
-title:               Proof
-tagline:             a Jekyll Theme for Mathematical Writings
+title:               Midwest Algebra Conspiracy
+tagline:             a Graduate Student Blog
 description:         >- # this means to ignore newlines until "url:"
-  Proof is a minimal Jekyll theme for collaborating and documenting mathematics.
-url:                 https://mahrud.github.io
-baseurl:             '/proof' # the subpath of your site, e.g. /blog
-gtag:                UA-131373039-2 # Google Analytics Tag
+  A group blog by a few graduate students studying algebra across the midwest.
+url:                 https://midwest-algebra-conspiracy.github.io
+baseurl:             '' # the subpath of your site, e.g. /blog
+gtag:                UA-140716120-1 # Google Analytics Tag
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme:
@@ -19,7 +19,11 @@ encoding: utf-8
 
 # Collections for entries
 collections:
-  posts:
+  texts:
+    output: true
+  examples:
+    output: true
+  authors:
     output: true
 
 # Markdown specs

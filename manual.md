@@ -3,10 +3,10 @@ layout: page
 title: Manual
 editor: admin
 toc: [background, write, review, publish]
-repository: https://github.com/mahrud/proof
+repository: https://github.com/midwest-algebra-conspiracy/midwest-algebra-conspiracy.github.io
 ---
 
-This manual is based on a documentation written by [Alex Gil](http://laic.columbia.edu/author/2728293031/) with beginners in mind, but has the necessary information for more seasoned conspirators. We will walk through writing a sample blog post titled *The Twisted Cubic*.
+This manual is based on a documentation written by [Alex Gil](http://laic.columbia.edu/author/2728293031/) with beginners in mind, but has the necessary information for more seasoned conspirators. We will walk through writing a sample blog entry titled *The Twisted Cubic*.
 
 ## Background
 
@@ -16,11 +16,11 @@ The {{ site.title }} is backed by [Jekyll](https://jekyllrb.com/), the static si
 
 ## Write!
 
-Each blog post is written in Markdown and is stored in the [`_posts`]({{ page.repository }}/tree/master/_posts) directory on GitHub. If you are familiar with $$\LaTeX$$ then learning Markdown will be a piece of cake; just open your favorite plain-text editor and start with the front matter:
+Each blog entry is written in Markdown and is stored in the [`_texts`]({{ page.repository }}/tree/master/_texts) directory on GitHub. If you are familiar with $$\LaTeX$$ then learning Markdown will be a piece of cake; just open your favorite plain-text editor and start with the front matter:
 
 ~~~ yaml
 ---
-layout: post
+layout: entry
 title: The Twisted Cubic
 author: David Hilbert
 categories: ["algebraic geometry", "examples"]
@@ -59,30 +59,30 @@ To add footnotes, use the following format:
 
 Looks about ready to submit, so save the file as `the-twisted-cubic.md` to match the title. We will have many chances to perfect it later.
 
-There are two routes for submitting a post:
+There are two routes for submitting an entry:
 
 ### Simple
 
 This option is useful if you don't need anything beyond basic Markdown:
-- open [`_posts`]({{ page.repository }}/tree/master/_posts)
-- click [upload file]({{ page.repository }}/upload/master/_posts)
+- open [`_texts`]({{ page.repository }}/tree/master/_texts)
+- click [upload file]({{ page.repository }}/upload/master/_texts)
 - upload `the-twisted-cubic.md`
 - write a commit title, e.g. `New Entry: The Twisted Cubic`
 - choose "Create a **new branch** for this commit and start a pull request"
-- write `post/the-twisted-cubic` as the branch name
+- write `entry/the-twisted-cubic` as the branch name
 - click "Propose new file"
 
-This process creates a new [pull request]({{ page.repository }}/pulls), which allows you to keep working on the post.
+This process creates a new [pull request]({{ page.repository }}/pulls), which allows you to keep working on the entry.
 
 ### Advanced
 
-This method is useful for more involved posts, and a working knowledge of your operating system's terminal is assumed.
+This method is useful for more involved entrys, and a working knowledge of your operating system's terminal is assumed.
 
 First, follow the guide for your operating system [here](https://jekyllrb.com/docs/installation/) to install a Ruby on your computer. Then, using the terminal's `cd` command, switch to the directory where you want to have your writing environment. Once inside the folder, enter the following commands:
 
 ~~~ bash
-$ git clone {{ page.repository }}.git proof
-$ cd proof
+$ git clone {{ page.repository }}.git conspiracy
+$ cd conspiracy
 $ make install
 ~~~
 
@@ -92,21 +92,21 @@ If everything works without an error, you can now build a local version of the s
 $ make serve
 ~~~
 
-If the site was rendered fine, copy the url from your terminal log and paste it into your browser. This url usually looks something like [`http://127.0.0.1:4000/proof/`](http://127.0.0.1:4000/proof/). At this point you should be looking at your very own working version of the {{ site.title }}.
+If the site was rendered fine, copy the url from your terminal log and paste it into your browser. This url usually looks something like [`http://127.0.0.1:4000/`](http://127.0.0.1:4000/). At this point you should be looking at your very own working version of the {{ site.title }}.
 
 Once the writing environment is set up:
-- save `the-twisted-cubic.md` in the `_posts` directory
-- open [`http://127.0.0.1:4000/proof/the-twisted-cubic/`](http://127.0.0.1:4000/proof/the-twisted-cubic/)
+- save `the-twisted-cubic.md` in the `_texts` directory
+- open [`http://127.0.0.1:4000/texts/the-twisted-cubic/`](http://127.0.0.1:4000/texts/the-twisted-cubic/)
 - check that everything rendered correctly
 - enter the following commands to make a new branch:
 ~~~ bash
-$ git checkout -b post/the-twisted-cubic
-$ git add _posts/the-twisted-cubic.md
+$ git checkout -b entry/the-twisted-cubic
+$ git add _texts/the-twisted-cubic.md
 $ git commit -m "New Entry: The Twisted Cubic"
 $ git push origin
 ~~~
 - open [this page]({{ page.repository }}/compare/master...master) in a browser
-- change the second drop down menu to `compare: post/the-twisted-cubic`
+- change the second drop down menu to `compare: entry/the-twisted-cubic`
 - make a new pull request
 
 ---

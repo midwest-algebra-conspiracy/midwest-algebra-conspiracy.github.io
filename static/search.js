@@ -14,7 +14,7 @@ var index = elasticlunr(function () {
 
 // Add to this index the proper metadata from the Jekyll content
 {%- assign count = 0 %}
-{%- for text in site.documents %}
+{%- for text in site.texts %}
 index.addDoc({
     id:      {{ count }},
     title:   {{ text.title   | jsonify }},
@@ -27,7 +27,7 @@ index.addDoc({
 
 // Builds reference data (maybe not necessary for us, to check)
 var store = [
-{%- for text in site.documents %}
+{%- for text in site.texts %}
     {
 	"title":  {{ text.title | jsonify }},
 	"author": {{ text.author | jsonify }},

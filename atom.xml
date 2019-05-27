@@ -11,7 +11,7 @@ layout: null
   <id>{{ site.url }}</id>
   <rights>CC BY-SA</rights>
 
-  {% for post in site.posts %}
+  {% for post in site.texts %}
   <entry>
     <title>{{ post.title }}</title>
     <link href="{{ site.url }}{{ post.url }}"/>

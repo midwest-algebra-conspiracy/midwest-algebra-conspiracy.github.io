@@ -41,24 +41,14 @@
       var macros = {
           "\\P": "\\mathbb{P}"
       }, delimiters = [
-          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "$$",  right: "$$",  display: true},
           { left: "\\[", right: "\\]", display: true},
           { left: "$",   right: "$",   display: false},
           { left: "\\(", right: "\\)", display: false}
       ];
 
       document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
-
-        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
-        // See: https://github.com/github/pages-gem/pull/545
-        document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
-        });
-
-        document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
-        });
+          renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
       });
     </script>
     <style>.katex { font-size: 1.15em; }</style>
