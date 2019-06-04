@@ -13,10 +13,12 @@ You can write stuff in _italics_, **bold**, or even ~~strikethrough~~.
 
 Next paragraph should start like this. Do not indent.
 
+The function $ \nu $ is written inline, but can also be in a block:
 
-The function $$\nu$$ is written inline, but can also be in a block:
+$$ \nu: \R\P^{1} \to \P^{3}. $$
 
-$$ \nu: \R\P^{1} \to \P^{3} $$
+Test of other forms: $5\times 5$, \\(5\times 5\\), and \\[5\times 5.\\]
+Note: `$$ 5\times 5 $$` will enclose the math in a script tag, which is undesirable.
 
 
 - O Captain! my Captain! rise up and hear the bells;
