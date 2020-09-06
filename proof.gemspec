@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "proof"
-  spec.version       = "1.1.0"
+  spec.version       = "1.2.0"
   spec.authors       = ["Mahrud Sayrafi"]
   spec.email         = ["mahrud@umn.edu"]
 
@@ -14,6 +14,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.1.0"
 
-  spec.add_development_dependency "bundler", "~> 1.17"
-  spec.add_development_dependency "rake", ">= 12.3.3"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
 end
